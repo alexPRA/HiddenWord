@@ -1,0 +1,44 @@
+﻿<Window x:Class="TP_FINAL.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TP_FINAL"
+        mc:Ignorable="d"
+        Loaded="Window_Loaded"
+        Title="Mot caché" Height="600" Width="1080" MinHeight="590" MinWidth="1070" WindowStartupLocation="CenterScreen" Icon="img/tic_tac.png">
+    <Grid>
+        <Grid.Background>
+            <VisualBrush>
+                <VisualBrush.Visual>
+                    <StackPanel Name="stkMedia" Background="White">
+                        <MediaElement HorizontalAlignment="Left" Name="mdeElement" VerticalAlignment="Top" Source="../../video/giphy.gif" LoadedBehavior="Manual" Stretch="Fill" SpeedRatio="1" IsMuted="False" />
+                    </StackPanel>
+                </VisualBrush.Visual>
+            </VisualBrush>
+        </Grid.Background>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Label Name="lblKey" Content="test" Grid.Column="0" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Bottom" FontSize="36" Margin="0,0,0,15" FontWeight="DemiBold" Visibility="Hidden" Foreground="White"/>
+        <Button Name="btnHint" Grid.Column="1" Content="Hint" Width="75" Height="50" FontSize="24" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,0,75,15" Click="BtnHint_Click"/>
+        <Border Height="420" Width="420" BorderBrush="White" BorderThickness="7" HorizontalAlignment="Center" Grid.Column="0">
+            <Grid Name="grdJeu" Height="400" Width="400" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="0">
+                <Grid.ColumnDefinitions>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                </Grid.RowDefinitions>
+            </Grid>
+        </Border>
+        <Border BorderThickness="7" BorderBrush="White" Height="420" Width="420" Grid.Column="1">
+            <Grid Name="grdListe" Height="400" Width="400" HorizontalAlignment="Center">
+                <Grid.ColumnDefinitions>
+                </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                
+            </Grid.RowDefinitions>
+        </Grid>
+        </Border>
+    </Grid>
+</Window>

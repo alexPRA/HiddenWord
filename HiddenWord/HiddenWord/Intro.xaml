@@ -1,0 +1,36 @@
+﻿<Window x:Class="TP_FINAL.Intro"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TP_FINAL"
+        mc:Ignorable="d"
+        Loaded="Window_Loaded"
+        Title="Intro" Height="600" Width="1080" MinHeight="590" MinWidth="1070" WindowStartupLocation="CenterScreen">
+    <Grid Name="grdPrincipal">
+        <Grid.Background>
+            <VisualBrush>
+                <VisualBrush.Visual>
+                    <StackPanel Name="stkMedia" Background="White">
+                        <MediaElement HorizontalAlignment="Left" Name="mdeElement" VerticalAlignment="Top" Source="../../video/giphy.gif" LoadedBehavior="Manual" Stretch="Fill" SpeedRatio="1" IsMuted="False" />
+                    </StackPanel>
+                </VisualBrush.Visual>
+            </VisualBrush>
+        </Grid.Background>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+            <Label Content="Hidden Words" FontStretch="ExtraExpanded" Grid.Column="1" HorizontalAlignment="Center" BorderThickness="0,0,0,2" BorderBrush="White" VerticalAlignment="Center" FontSize="36" FontStyle="Italic" FontWeight="DemiBold" Foreground="White"/>
+            <Button x:Name="btnPlay" Content="Play" Grid.Column="0" Grid.Row="1" Style="{StaticResource principal}" Click="btnPlay_Click"/>
+            <Button x:Name="btnLevels" Content="Levels" Grid.Column="1" Grid.Row="1" Style="{StaticResource principal}" Click="btnLevels_Click"/>
+            <Button x:Name="btnThemes" Content="Themes" Grid.Column="3" Grid.Row="1" Style="{StaticResource principal}" Click="btnThemes_Click"/>
+        </Grid>
+    </Grid>
+</Window>
